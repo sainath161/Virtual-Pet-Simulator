@@ -14,13 +14,13 @@ function updateAttributes() {
 function updatePetImage() {
   const petImg = document.getElementById("pet");
   if (pet.hunger < 30) {
-    petImg.src = "hungry.png";
+    petImg.src = "Assets/hungry.png";
   } else if (pet.happiness < 30) {
-    petImg.src = "sad.jpg";
+    petImg.src = "Assets/sad.jpg";
   } else if (pet.energy < 30) {
-    petImg.src = "tired.png";
+    petImg.src = "Assets/tired.png";
   } else {
-    petImg.src = "happy.jpg";
+    petImg.src = "Assets/happy.jpg";
   }
 }
 
@@ -36,20 +36,20 @@ function temporarilySetImage(imageSrc, callback) {
 function feedPet() {
   pet.hunger = Math.min(pet.hunger + 20, 100);
   updateAttributes();
-  temporarilySetImage("eating.jpg", () => {});
+  temporarilySetImage("Assets/eating.jpg", () => {});
 }
 
 function playWithPet() {
   pet.happiness = Math.min(pet.happiness + 20, 100);
   pet.energy = Math.max(pet.energy - 10, 0);
   updateAttributes();
-  temporarilySetImage("playing.png", () => {});
+  temporarilySetImage("Assets/playing.png", () => {});
 }
 
 function putPetToSleep() {
   pet.energy = Math.min(pet.energy + 20, 100);
   updateAttributes();
-  temporarilySetImage("sleeping.jpg", () => {});
+  temporarilySetImage("Assets/sleeping.jpg", () => {});
 }
 
 function decreaseAttributesOverTime() {
