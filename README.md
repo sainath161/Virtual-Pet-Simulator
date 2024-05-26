@@ -49,4 +49,4 @@ The JavaScript file contains the logic for updating the pet's attributes, changi
 
 ## Deployment
 
-This project is deployed and can view at [Virtual Pet Simulator](https://sainath161.github.io/Virtual-Pet-Simulator/).
+This project is deployed and can view at [Virtual Pet Simulator](https://petsimulator.netlify.app/).
